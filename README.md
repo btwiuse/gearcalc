@@ -16,3 +16,17 @@ neg: 0x86ad9dd2c43e062ea50b366b7d80cb663df9d513f5c634fc05fc24fc314aed1a
 
 gearcalc: 0x783ca7336ba46f0f4a65c483c42cbb56445c0f258275982f7817d729a18487a0
 ```
+
+## Objectives
+
+In this workshop, you will learn how to
+
+- Send messages across programs
+- Manage multi-contract project using cargo workspace
+- Write basic asyncronous smart contracts
+
+References:
+- https://github.com/qn-ng/microcalc
+- https://github.com/chloe0x0/exprs/tree/main
+- https://docs.gear.rs/gstd/msg/fn.send_for_reply_as.html
+- https://wiki.gear-tech.io/docs/developing-contracts/interactions-between-programs
