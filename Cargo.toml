@@ -1,0 +1,32 @@
+[package]
+name = "gearcalc"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+path = "lib.rs"
+
+[dependencies]
+gstd = { git = "https://github.com/gear-tech/gear.git" }
+codec = { path = "./codec" }
+hex-literal = "0.3.4"
+
+[build-dependencies]
+gear-wasm-builder = { git = "https://github.com/gear-tech/gear.git" }
+
+[dev-dependencies]
+gtest = { git = "https://github.com/gear-tech/gear.git" }
+
+[workspace]
+members = [
+  ".",
+  "add",
+  "mult",
+  "sub",
+  "div",
+  "neg",
+  "modulus",
+  "pow",
+  "codec",
+]
