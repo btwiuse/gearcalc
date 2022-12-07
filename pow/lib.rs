@@ -9,7 +9,7 @@ use gstd::ToString;
 async fn mult(left: i128, right: i128) -> i128 {
     let x = gstd::msg::send_for_reply_as::<_, Ops>(
         ActorId::new(hex_literal::hex!(
-            "ebb3ed0712ef2ba890ca6b8a317aba6be6c3598c127e9b9828c3c42dbb879815"
+            "c6b01960c37fd23d32ad5a2aa438b0fd5c50d1235cd2a91953ff9a6bef93b2df"
         )),
         Ops::Mult(left, right),
         0,
