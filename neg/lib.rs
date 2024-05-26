@@ -2,7 +2,6 @@
 
 use codec::Ops;
 use gstd::ActorId;
-use gstd::ToString;
 
 async fn sub(left: i128, right: i128) -> i128 {
     let x = gstd::msg::send_for_reply_as::<_, Ops>(
@@ -10,6 +9,7 @@ async fn sub(left: i128, right: i128) -> i128 {
             "2628ef3dc3e9fc20841b6dbafc7aa0d07ee6a8c280408ecafec4ad31942c1d2d"
         )),
         Ops::Sub(left, right),
+        0,
         0,
     )
     .unwrap()
@@ -34,11 +34,4 @@ async fn main() {
         }
         _ => (),
     }
-}
-
-gstd::metadata! {
-    title: "neg",
-    handle:
-        input: Ops,
-        output: Ops,
 }

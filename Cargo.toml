@@ -8,15 +8,16 @@ edition = "2021"
 path = "lib.rs"
 
 [dependencies]
-gstd = { git = "https://github.com/gear-tech/gear.git" }
+gstd = { version = "1.4.1" }
 codec = { path = "./codec" }
 hex-literal = "0.3.4"
 
 [build-dependencies]
-gear-wasm-builder = { git = "https://github.com/gear-tech/gear.git" }
+codec = { path = "./codec" }
+gear-wasm-builder = { version = "1.4.1" }
 
 [dev-dependencies]
-gtest = { git = "https://github.com/gear-tech/gear.git" }
+gtest = { version = "1.4.1" }
 
 [workspace]
 members = [

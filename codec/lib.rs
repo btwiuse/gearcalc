@@ -1,6 +1,18 @@
 #![no_std]
 
+use gmeta::{InOut, Metadata};
 use gstd::prelude::*;
+
+pub struct ProgramMetadata;
+
+impl Metadata for ProgramMetadata {
+    type Init = ();
+    type Handle = InOut<Ops, Ops>;
+    type Others = ();
+    type Reply = ();
+    type Signal = ();
+    type State = ();
+}
 
 #[derive(Decode, Encode, TypeInfo)]
 #[codec(crate = gstd::codec)]

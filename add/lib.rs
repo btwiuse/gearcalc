@@ -1,7 +1,6 @@
 #![no_std]
 
 use codec::Ops;
-use gstd::ToString;
 
 fn add(left: i128, right: i128) -> i128 {
     left + right
@@ -16,11 +15,4 @@ extern "C" fn handle() {
         }
         _ => (),
     }
-}
-
-gstd::metadata! {
-    title: "add",
-    handle:
-        input: Ops,
-        output: Ops,
 }
