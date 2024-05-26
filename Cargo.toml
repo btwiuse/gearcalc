@@ -10,7 +10,6 @@ path = "lib.rs"
 [dependencies]
 gstd = { version = "1.4.1" }
 codec = { path = "./codec" }
-hex-literal = "0.3.4"
 
 [build-dependencies]
 codec = { path = "./codec" }

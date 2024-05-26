@@ -1,13 +1,10 @@
 #![no_std]
 
 use codec::Ops;
-use gstd::ActorId;
 
 async fn sub(left: i128, right: i128) -> i128 {
     let x = gstd::msg::send_for_reply_as::<_, Ops>(
-        ActorId::new(hex_literal::hex!(
-            "2628ef3dc3e9fc20841b6dbafc7aa0d07ee6a8c280408ecafec4ad31942c1d2d"
-        )),
+        gstd::actor_id!("0x2628ef3dc3e9fc20841b6dbafc7aa0d07ee6a8c280408ecafec4ad31942c1d2d"),
         Ops::Sub(left, right),
         0,
         0,
